@@ -20,9 +20,9 @@ public class TaskController {
         return new TaskDto(1L, "test title", "test_content");
     }
 
-    @DeleteMapping
-    public void deleteTask(Long taskId) {
-
+    @DeleteMapping(value = "{taskId}")
+    public String deleteTask(@PathVariable Long taskId) {
+        return "delete task number ID: " + taskId;
     }
 
     @PutMapping
@@ -30,8 +30,8 @@ public class TaskController {
         return new TaskDto(1L, "Edited test title", "Test content");
     }
 
-    @PostMapping
-    public void createTask(TaskDto taskDto) {
-
+    @PostMapping(value = "{taskDto}")
+    public String createTask(@PathVariable TaskDto taskDto) {
+        return "create new task";
     }
 }
