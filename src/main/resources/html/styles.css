@@ -1,0 +1,17 @@
+body {
+   background-color: grey;
+  
+}
+
+h1 {
+   text-align: center;
+   
+}
+.red-textTitle {
+   color: red;
+   font-size: 200px;
+}
+.red-textBody {
+   color: red;
+   font-size: 40px;
+}
