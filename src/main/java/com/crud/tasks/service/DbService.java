@@ -16,7 +16,7 @@ import java.util.Optional;
 public class DbService {
 
 
-    private TaskRepository repository;
+    private final TaskRepository repository;
 
     public List<Task> getAllTasks() {
         return repository.findAll();
