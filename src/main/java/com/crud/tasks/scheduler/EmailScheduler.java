@@ -27,7 +27,6 @@ public class EmailScheduler {
                         SUBJECT,
                         size == 1 ? "Currently in database you got 1 task"
                                 : "Currently in database you got " + size + " tasks"
-                )
-        );
+                ));
     }
 }
