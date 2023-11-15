@@ -1,4 +1,4 @@
-package com.crud.tasks.com.crud.tasks.domain;
+package com.crud.tasks.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -6,11 +6,11 @@ import lombok.Data;
 
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Trello {
+public class Badges {
 
-    @JsonProperty("board")
-    private int board;
+    @JsonProperty("votes")
+    private int votes;
 
-    @JsonProperty("card")
-    private int card;
+    @JsonProperty("attachmentsByType")
+    private AttachmentsByType attachmentsByType;
 }
