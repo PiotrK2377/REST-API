@@ -24,14 +24,13 @@ public class MailCreatorService {
     public String buildTrelloCardEmail(String message) {
         Context context = new Context();
         context.setVariable("message",message);
-        context.setVariable("task_url","https://piotrk2377.github.io/");
+        context.setVariable("task_url","https://piotrk2377.github.io");
         context.setVariable("button", "Visit website");
         context.setVariable("admin_name", adminConfig.getAdminName());
-        context.setVariable("company_details",
-                companyDetails.getCompanyName() + "," +
-                companyDetails.getCompanyGoal() + "," +
-                companyDetails.getCompanyEmail() + "," +
-                companyDetails.getCompanyPhone());
+        context.setVariable("company_name", companyDetails.getCompanyName());
+        context.setVariable("company_goal", companyDetails.getCompanyGoal());
+        context.setVariable("company_email", companyDetails.getCompanyEmail());
+        context.setVariable("company_phone", companyDetails.getCompanyPhone());
         return templateEngine.process("mail/created-trello-card-mail", context);
     }
 }
