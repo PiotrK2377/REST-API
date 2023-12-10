@@ -72,6 +72,7 @@ public class MailCreatorService {
         context.setVariable("show_button", false);
         context.setVariable("is_friend", true);
         context.setVariable("task_list", taskList);
+        context.setVariable("goodbye_message","Until next time :)");
         return templateEngine.process("mail/created-scheduled-task-list-mail", context);
     }
 }
